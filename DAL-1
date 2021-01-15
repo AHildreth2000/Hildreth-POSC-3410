@@ -88,45 +88,45 @@ homeScore
 # Now it is your turn
 
 # Convert `awayScore` to integer and assign to same variable name
-awayScore<-as.integer(awayScore)
+awayScore <- as.integer(awayScore)
 awayScore
 
 # Make a numeric vector by using the syntax`c(#,#,#,#)`; check its structure.
-vector_numeric <-c(12, 8, 16, 4, 15)
+vector_numeric <- c(12, 8, 16, 4, 15)
 str(vector_numeric)
 
 #Make a numeric vector,`myNumericVector`, on your own; check its structure.
-myNumericVector<-c(15, 20, 46, 47)
+myNumericVector <- c(15, 20, 46, 47)
 str(myNumericVector)
 
 # Make a logical vector; check its structure.
-vector_logical<-c(TRUE, TRUE, FALSE, T, F)
+vector_logical <- c(TRUE, TRUE, FALSE, T, F)
 str(vector_logical)
 
 # Make a logical vector,`myLogicalVector`on your own; check its structure.
-myLogicalVector<-c(TRUE, FALSE, FALSE, F, T)
+myLogicalVector <- c(TRUE, FALSE, FALSE, F, T)
 str(myLogicalVector)
 
 # Make a character vector; check it's structure.
-vector_character<-c("Montana", "Aikman", "Manning", "Favre", "Mahomes")
+vector_character <- c("Montana", "Aikman", "Manning", "Favre", "Mahomes")
 str(vector_character)
 
 # Make a character vector,`myCharVector`on your own; check its structure.
-myCharVector<-c("Black", "Gray", "Collins", "Cruz", "Young")
+myCharVector <- c("Black", "Gray", "Collins", "Cruz", "Young")
 str(myCharVector)
 
 # Make a list of the vectors that I created: drAllardList; check its structure.
-drAllardList<-list(vector_numeric, vector_logical, vector_character)
+drAllardList <- list(vector_numeric, vector_logical, vector_character)
 str(drAllardList)
 
 # Notice a few things about the list: (1) A list is made up of vectors with different types, (2) the list is made up of vectors of different lengths, (3) running str() on list results in console output telling us "List of 3".
 
 # Make a list of the vectors YOU created: `myList`; check its structure.
-myList<-list(myNumericVector, myLogicalVector, myCharVector)
+myList <- list(myNumericVector, myLogicalVector, myCharVector)
 str(myList)
 
 # Create data fame: QB_df; print in console; check structure
-QB_df<-data.frame(vector_character, vector_numeric, vector_logical)
+QB_df <- data.frame(vector_character, vector_numeric, vector_logical)
 QB_df
 str(QB_df)
 

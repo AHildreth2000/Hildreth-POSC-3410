@@ -46,19 +46,19 @@ mySecondVar
 #Now let's practice assigning variables.
 
 # Assign "Clemson" to`home
-`home <- "Clemson"
+home <- "Clemson"
 
-# Assign "Tigers" to`h_mascot
-`h_mascot <- "Tigers"
+# Assign "Tigers" to h_mascot
+h_mascot <- "Tigers"
 
 # Assign "Ohio State" to`away
-`away <- "Ohio State"
+away <- "Ohio State"
 
 # Assign 'Buckeyes' to`a_mascot
-`a_mascot` <- 'Buckeyes'
+a_mascot <- 'Buckeyes'
 
 # Assign 31 to`homeScore
-`homeScore <- 31
+homeScore <- 31
 
 # Assign 0 to`awayScore
 awayScore <- 0

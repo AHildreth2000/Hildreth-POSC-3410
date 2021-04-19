@@ -1,0 +1,42 @@
+# Title: ShinyApp ####
+# Author: Andrew J. Hildreth
+# ajhildr@clemson.edu
+# Date Created: 04-18-2021
+
+library(shiny)
+library(tidyverse)
+
+ui <- fluidPage(
+  titlePanel("Number of Attacks in NA"),
+  
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput(
+        "gtd_years",
+        "Years",
+        min = min(america_df$Year, na.rm=TRUE),
+        max = max(america_df$Year, na.rm=TRUE),
+        value=c(min(america_df$Year, na.rm=TRUE), max(america_df$Year, na.rm=TRUE)),
+        sep=""
+      )
+    ),
+    mainPanel(
+      h1("Hello World"),
+      plotOutput("gtd_plot"),
+      p("These graphs illustrate the number of each type of attack that occurs over a given time period.")
+    )
+  )
+)
+
+server <- function(input, output, session) {
+  output$gtd_plot <- renderPlot({
+    data <- america_df %>%
+      filter(Year >= input$gtd_years [1] & Year <= input$gtd_years [2])
+    data %>%
+      ggplot(aes(x=Year, y=Number, fill=AttackType)) +
+      geom_bar(stat="identity") +
+      facet_wrap(~AttackType)
+  })
+}
+
+shinyApp(ui=ui, server=server)
